@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--clr-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+:root {
+  --clr-bg: hsl(233, 47%, 7%);
+  --clr-card: hsl(244, 38%, 16%);
+  --clr-accent: hsl(277, 64%, 61%);
+  --clr-text-1: hsl(0, 0%, 100%);
+  --clr-text-2: hsla(0, 0%, 100%, 0.75);
+  --clr-text-3: hsla(0, 0%, 100%, 0.6);
+
+  --ff-inter: "Inter", sans-serif;
+  --ff-lex: "Lexend Deca", serif;
+
+  --mobile: 375px;
+}
+
+.card {
+  color: var(--clr-text-1);
+  background-color: var(--clr-card);
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  font-family: var(--ff-inter);
+}
+
+.left {
+  margin: 4rem;
+  width: 50%;
+}
+
+.head {
+  padding-bottom: 2rem;
+  font-weight: 700;
+  width: 80%;
+}
+.head span {
+  color: #ab59d7;
+}
+
+.text {
+  padding-bottom: 4rem;
+  line-height: 2;
+  width: 90%;
+}
+.stats {
+  display: flex;
+  margin-bottom: -2rem;
+  font-weight: 400;
+  color: var(--clr-text-1);
+}
+.stat {
+  padding-right: 4rem;
+  color: var(--clr-text-3);
+}
+.stat h2 {
+  padding-bottom: 0.5rem;
+  color: var(--clr-text-1);
+  font-size: 25px;
+  font-weight: 700;
+}
+.right {
+  position: relative;
+}
+.text{
+    color: var(--clr-text-2);
+}
+.right::after {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #60009c8a;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+}
+.right img {
+  border-radius: 5px;
+  margin-bottom: -0.3rem;
+}
+@media(max-width: 900px){
+    .card{
+        flex-direction: column-reverse;
+        width: 85%;
+        margin-top: 8rem;
+        margin-bottom:8rem; 
+        overflow: hidden;
+    }
+    .left{
+        width: 100%;
+        margin: 0;
+        margin-left: 1rem;
+        margin-top: -4rem;
+    }
+    .head{
+        text-align: center;
+        width: 90%;    
+    }
+    .text{
+        width: 85%;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        margin-left: 1rem;
+    }
+    .stats{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .stat{
+        margin-bottom: 2rem;
+    }
+    .stat h2{
+        text-align: center;
+    }
+    .right img{
+        scale: 0.75;
+        position: relative;
+        right: 75px;
+        bottom: 60px;
+    }
+    .right::after{
+        height: 74.2%;
+    }
+}
